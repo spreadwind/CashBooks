@@ -30,6 +30,7 @@ public class AddCostActivity extends AppCompatActivity {
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
 
+
         edtMoney = (EditText) this.findViewById(R.id.edt_add_money);
         edtNote = (EditText) this.findViewById(R.id.edt_add_note);
         txtDate = (TextView) this.findViewById(R.id.txt_add_date);

@@ -4,6 +4,7 @@ import org.litepal.crud.DataSupport;
 
 /**
  * Created by H on 2017/11/3.
+ *数据库类
  */
 
 public class BillDB extends DataSupport {

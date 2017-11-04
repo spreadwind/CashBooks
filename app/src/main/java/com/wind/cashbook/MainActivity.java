@@ -15,9 +15,10 @@ import android.widget.TextView;
 
 /**
  * tabLayout部分参考：https://github.com/yaoyongchao/MyTabLayout
+ * MVP框架搭建参考：http://www.jianshu.com/p/965e67222454
  * */
 public class MainActivity extends AppCompatActivity{
-
+    private NoScrollViewPager noScrollViewPager;
     private static final String TAG = "MainActivity";
     private TabLayout mTabLayout;
     //Tab 文字
@@ -40,7 +41,10 @@ public class MainActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initViews();
+//        noScrollViewPager.setNoScroll(true); //设置底部导航的Viewpager无法左右滑动
     }
+
+
 
     private void initViews() {
         mTabLayout = (TabLayout)findViewById(R.id.tablayout);
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
             View view = inflater.inflate(R.layout.tab_custom,null);
             tab.setCustomView(view);
 
-            TextView tvTitle = (TextView)view.findViewById(R.id.tv_tab);
+            TextView tvTitle = (TextView) view.findViewById(R.id.tv_tab);
             tvTitle.setText(tabTitles[i]);
             ImageView imgTab = (ImageView) view.findViewById(R.id.img_tab);
             imgTab.setImageResource(tabImgs[i]);
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
-   /* @Override
+/*    @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
     }
